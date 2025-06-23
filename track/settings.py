@@ -114,12 +114,14 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'elijah-tracking.onrender.com',
+    'https://ehis-cargoshipment.onrender.com',
     'https://trackwiseventures.com'
    
 ]
 
 
+# Internationalization
+# https://docs.djangoproject.com/en/3.0/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
 
