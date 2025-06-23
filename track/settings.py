@@ -114,8 +114,8 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://ehis-cargoshipment.onrender.com',
-    'https://trackwiseventures.com/'
+    'elijah-tracking.onrender.com',
+    'https://trackwiseventures.com'
    
 ]
 
