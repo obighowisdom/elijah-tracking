@@ -1,0 +1,119 @@
+{% load static %} {% block content %}
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TrackWise - To every direction</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="{% static 'css/style.css'%}" />
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rubik:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- 
+    - preload images
+  -->
+</head>
+
+<body id="top">
+  <!-- 
+    - #HEADER
+  -->
+
+
+  <section style="
+      background-image: url('../static/image/logistic.jpg');
+      overflow-y: hidden; background-repeat: no-repeat; background-size: cover;
+    ">
+    <div class="details-box">
+      <div class="content-box">
+        <!-- <div class="imgBox"></div> -->
+
+        <div class="content">
+          <div class="box">
+            <div class="track-title">
+              <h1 class="title">TRACKING ID:</h1>
+              <p>{{ tracking_data.tracking_id }}</p>
+            </div>
+            <div class="details-item">
+              <div class="itemsOne">
+                <div class="det">
+                  <h1>Customer Name: </h1>
+                  <p>{{ tracking_data.customer_name }}</p>
+                </div>
+                
+                 <div class="det">
+                  <h1>Address: </h1>
+                  <p>{{ tracking_data.address }}</p>
+                </div>
+                 <div class="det">
+                  <h1>Current Location: </h1>
+                  <p>{{ tracking_data.current_location }}</p>
+                </div>
+                 <div class="det">
+                  <h1>Delivery Date: </h1>
+                  <p>{{ tracking_data.estimated_delivery_date }}</p>
+                </div>
+                 <div class="det">
+                  <h1>Delivery Time: </h1>
+                  <p>{{ tracking_data.time }}</p>
+                </div>
+                 
+              </div>
+               <div class="itemsTwo">
+                <div class="det">
+                  <h1>Country: </h1>
+                  <p>{{ tracking_data.country }}</p>
+                </div>
+                <div class="det">
+                  <h1>State: </h1>
+                  <p>{{ tracking_data.state }}</p>
+                </div>
+                 <div class="det">
+                  <h1>City: </h1>
+                  <p>{{ tracking_data.city }}</p>
+                </div>
+                 <div class="det">
+                  <h1>Destination: </h1>
+                  <p>{{ tracking_data.destination }}</p>
+                </div>
+                 <div class="det">
+                  <h1>STATUS: </h1>
+                  <p style="color: green;">{{ tracking_data.status }}</p>
+                </div>
+                
+              </div>
+           
+            </div>
+            <div class="notice">
+              <marquee behavior="" direction="">{{ tracking_data.notice }}</marquee>
+            </div>
+            <div class="map">
+              <h4>View Package Location in Map</h4>
+        <iframe src="{{tracking_data.map}}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+</body>
+{% endblock content %}

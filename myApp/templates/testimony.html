@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'css/test.css'%}">
+   
+    <title>TrackWise | customer reviews</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="container__left">
+          <h1>Read what our customers love about us</h1>
+          <p>
+           TrackWise have helped over 3000+ clients across the world, delivering products globally with the speed of light
+          </p>
+          <p>
+            We have helped companies increase their customer base and generate
+            multifold revenue with our service.
+          </p>
+          <button>Excellenceis our watch word</button>
+        </div>
+        <div class="container__right">
+    {% for a in test %}
+
+          <div class="card">
+            <img src="{{a.image.url}}" alt="user" />
+            <div class="card__content">
+              <span><i class="ri-double-quotes-l"></i></span>
+              <div class="card__details">
+                <p>
+                  {{ a.message }}
+                </p>
+                <h4>- {{ a.name }}</h4>
+              </div>
+            </div>
+          </div>
+      {% endfor %}
+        
+         
+        </div>
+      </div>
+    </header>
+  </body>
+</html>
