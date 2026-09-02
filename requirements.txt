@@ -1,5 +1,4 @@
 asgiref==3.8.1
-autopep8==1.4.4
 certifi==2019.3.9
 chardet==3.0.4
 crispy-bootstrap4==2024.10
